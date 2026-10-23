@@ -1,0 +1,56 @@
+$cvet_fona: #0B0B0B;
+$cvet_teksta: #FFFFFF;
+
+@mixin tekst_razmer {
+    font-weight: 400;
+    font-size: 18px;
+    color: $cvet_teksta;
+}
+
+.tretiy_blok {
+    background-color: $cvet_fona;
+    width: 98vw;
+    .cherniy_krug {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+        display: flex;
+        width: 98vw;
+        h2 {
+            font-weight: 400;
+            font-size: 38px;
+            color: $cvet_teksta;
+        }
+        p {
+            @include tekst_razmer();
+            color: $cvet_teksta;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .tretiy_blok {
+        .cherniy_krug {
+            img {
+                height: 300px;
+                width: 380px;
+            }
+            h2 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}

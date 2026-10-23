@@ -1,0 +1,152 @@
+$cvet_seriy: rgba(0, 0, 0, 0.3);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.golova {
+    justify-content: center;
+    display: flex;
+    width: 98vw;
+    .navigaciya {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        height: 6vh;
+        width: 84vw;
+        .golova_levo {
+            width: 30vw;
+            ul {
+                color: $cvet_seriy;
+                display: flex;
+                justify-content: space-around;
+                list-style: none;
+                width: 26vw;
+                text-decoration: none;
+            }
+        }
+        .golova_pravo {
+            width: 30vw;
+            ul {
+                display: flex;
+                color: $cvet_seriy;
+                justify-content: space-around;
+                text-decoration: none;
+                width: 26vw;
+                list-style: none;
+                li:last-child {
+                    align-items: center;
+                    background-color: #000000;
+                    display: flex;
+                    height: 23px;
+                    justify-content: center;
+                    color: #FFFFFF;
+                    width: 64px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+    .golova {
+        width: 94vw;
+        .navigaciya {
+            width: 70vw;
+            .golova_levo {
+                width: 29vw;
+                ul {
+                    font-size: 16px;
+                    width: 27vw;
+                }
+            }
+            .golova_pravo {
+                width: 32vw;
+                ul {
+                    font-size: 16px;
+                    width: 27vw;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    .golova {
+        width: 95vw;
+        .navigaciya {
+            width: 97vw;
+            .golova_levo {
+                width: 39vw;
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    align-items: center;
+                    justify-content: space-around;
+                    display: flex;
+                    font-size: 12px;
+                    width: 38vw;
+                }
+            }
+            img {
+                height: 13px;
+                width: 70px;
+            }
+            .golova_pravo {
+                width: 40vw;
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-around;
+                    font-size: 12px;
+                    width: 37vw;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .golova {
+        width: 95vw;
+        .navigaciya {
+            width: 97vw;
+            .golova_levo {
+                width: 38vw;
+                ul {
+                    flex-wrap: wrap;
+                    height: 5vh;
+                    padding: 0;
+                    margin: 0;
+                    align-items: center;
+                    justify-content: space-around;
+                    display: flex;
+                    font-size: 12px;
+                    width: 37vw;
+                }
+            }
+            img {
+                height: 13px;
+                width: 70px;
+            }
+            .golova_pravo {
+                width: 40vw;
+                ul {
+                    flex-wrap: wrap;
+                    height: 5vh;
+                    padding: 0;
+                    margin: 0;
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-around;
+                    font-size: 12px;
+                    width: 37vw;
+                }
+            }
+        }
+    }
+}

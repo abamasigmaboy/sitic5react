@@ -1,0 +1,120 @@
+$belyi_cvet: #FFFFFF;
+
+@mixin ramochka_knopki {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 1px solid $belyi_cvet;
+    height: 36px;
+    width: 215px;
+}
+
+.pervyi_blok {
+    background-image: url(../assets/Fonn.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 92vh;
+    width: 100%;
+    .seredina_bloka {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 70vh;
+        width: 98vw;
+        h1 {
+            height: 10vh;
+            font-weight: 400;
+            font-size: 57px;
+            color: $belyi_cvet;
+        }
+        p {
+            text-align: center;
+            font-weight: 400;
+            font-size: 20px;
+            color: $belyi_cvet;
+        }
+        .dve_knopochki {
+            top: 4vh;
+            position: relative;
+            justify-content: space-around;
+            display: flex;
+            width: 24vw;
+            .levaya_knopochka {
+                @include ramochka_knopki;
+            }
+            .pravaya_knopochka {
+                @include ramochka_knopki;
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+    .pervyi_blok {
+        .seredina_bloka {
+            .dve_knopochki {
+                width: 30vw;
+                .levaya_knopochka {
+                    @include ramochka_knopki;
+                }
+                .pravaya_knopochka {
+                    @include ramochka_knopki;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    .pervyi_blok {
+        .seredina_bloka {
+            h1 {
+                height: 8vh;
+                font-size: 47px;
+            }
+            .dve_knopochki {
+                width: 58vw;
+                .levaya_knopochka {
+                    @include ramochka_knopki;
+                    width: 190px;
+                }
+                .pravaya_knopochka {
+                    @include ramochka_knopki;
+                    width: 190px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .pervyi_blok {
+        .seredina_bloka {
+            h1 {
+                height: 6vh;
+                font-size: 30px;
+            }
+            .dve_knopochki {
+                flex-wrap: wrap;
+                height: 12vh;
+                width: 50vw;
+                .levaya_knopochka {
+                    width: 160px;
+                    @include ramochka_knopki;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+                .pravaya_knopochka {
+                    width: 160px;
+                    @include ramochka_knopki;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

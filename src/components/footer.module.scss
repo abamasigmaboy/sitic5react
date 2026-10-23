@@ -1,0 +1,167 @@
+$cvet_niza: #000000;
+$cvet_teksta_bel: #FFFFFF;
+$cvet_teksta_ser: #7E7E7E;
+
+@mixin shapka_stolbika {
+    justify-content: center;
+    display: flex;
+    font-weight: 400;
+    font-size: 16px;
+    color: $cvet_teksta_bel;
+    height: 5vh;
+    width: 6vw;
+}
+
+@mixin spiski_tekst {
+    line-height: 30px;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: $cvet_teksta_ser;
+    span {
+        color: $cvet_teksta_bel;
+    }
+}
+
+.podval {
+    background-color: $cvet_niza;
+    .nizhnyaya_polosa {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 50vh;
+        width: 98vw;
+        .podval_vnutri {
+            justify-content: space-around;
+            display: flex;
+            width: 75vw;
+            .stolbik {
+                width: 157px;
+                h2 {
+                    @include shapka_stolbika();
+                }
+                ul {
+                    @include spiski_tekst();
+                }
+            }
+            .praviy_stolbik {
+                flex-direction: column;
+                align-items: end;
+                justify-content: center;
+                display: flex;
+                width: 30vw;
+                h2 {
+                    height: 4vh;
+                    font-weight: 400;
+                    font-size: 16px;
+                    letter-spacing: 1.71px;
+                    color: $cvet_teksta_bel;
+                }
+                p {
+                    height: 3vh;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $cvet_teksta_ser;
+                }
+                .knopki_podpiski {
+                    justify-content: space-around;
+                    display: flex;
+                    height: 7vh;
+                    width: 19vw;
+                    .pole_vvoda {
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                        color: $cvet_teksta_bel;
+                        font-weight: 400;
+                        font-size: 14px;
+                        background-color: $cvet_niza;
+                        border: 1px solid $cvet_teksta_bel;
+                        height: 38px;
+                        width: 231px;
+                    }
+                    .knopka_otpravit {
+                        color: $cvet_teksta_ser;
+                        border: 1px solid $cvet_teksta_bel;
+                        height: 38px;
+                        width: 135px;
+                    }
+                }
+                h3 {
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    height: 6vh;
+                    font-weight: 400;
+                    font-size: 13px;
+                    color: $cvet_teksta_ser;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+    .podval {
+        .nizhnyaya_polosa {
+            .podval_vnutri {
+                .stolbik {
+                    h2 {
+                        width: 5vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    .podval {
+        .nizhnyaya_polosa {
+            .podval_vnutri {
+                width: 87vw;
+                .stolbik {
+                    h2 {
+                        font-size: 16px;
+                        width: 7vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .podval {
+        .nizhnyaya_polosa {
+            height: 110vh;
+            display: flex;
+            justify-content: space-evenly;
+            .podval_vnutri {
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: space-evenly;
+                height: 100vh;
+                width: 70vw;
+                .stolbik {
+                    h2 {
+                        font-size: 16px;
+                        width: 18vw;
+                    }
+                }
+                .praviy_stolbik {
+                    width: 70vw;
+                    .knopki_podpiski {
+                        height: 8vh;
+                        width: 60vw;
+                        .pole_vvoda {
+                            height: 38px;
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+$temnyi_cvet: #1B1B1B;
+$seriy_cvet: #666666;
+
+@mixin bolshoi_shrift {
+    font-weight: 400;
+    font-size: 35px;
+    color: $temnyi_cvet;
+}
+
+@mixin obychniy_shrift {
+    font-weight: 400;
+    font-size: 16px;
+    color: $seriy_cvet;
+}
+
+.pyatyi_blok {
+    background-position: center;
+    background-image: url(../assets/Fonn5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 98vw;
+    .zhenshina_tekst {
+        align-items: end;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        height: 60vh;
+        width: 66vw;
+        h2 {
+            @include bolshoi_shrift();
+            width: 15.3vw;
+            height: 6vh;
+        }
+        p {
+            width: 15vw;
+            height: 6vh;
+            @include obychniy_shrift();
+            color: $seriy_cvet;
+            line-height: 20px;
+        }
+        h3 {
+            width: 15vw;
+            font-weight: 400;
+            font-size: 16px;
+            color: $temnyi_cvet;
+        }
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+    .pyatyi_blok {
+        background-position: center;
+        .zhenshina_tekst {
+            p {
+                left: 5vw;
+                position: relative;
+                font-size: 16px;
+                width: 20vw;
+            }
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    .pyatyi_blok {
+        background-position: center;
+        .zhenshina_tekst {
+            p {
+                height: 9vh;
+                left: 8vw;
+                position: relative;
+                font-size: 16px;
+                width: 23vw;
+            }
+            h2 {
+                font-size: 30px;
+                width: 28vw;
+                left: 13vw;
+                position: relative;
+            }
+        }
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .pyatyi_blok {
+        background-position: center;
+        .zhenshina_tekst {
+            h3 {
+                left: 5vw;
+                position: relative;
+                width: 22vw;
+                font-size: 15px;
+            }
+            p {
+                height: 14vh;
+                left: 8vw;
+                position: relative;
+                font-size: 16px;
+                width: 25vw;
+            }
+            h2 {
+                height: 10vh;
+                font-size: 28px;
+                width: 28vw;
+                left: 11vw;
+                position: relative;
+            }
+        }
+    }
+}

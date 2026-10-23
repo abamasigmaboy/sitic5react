@@ -1,0 +1,91 @@
+$belaya_kraska: #FFFFFF;
+
+@mixin tekst_vosemnadcat {
+    font-weight: 400;
+    font-size: 18px;
+    color: $belaya_kraska;
+}
+
+.obolochka_dva {
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    display: flex;
+    width: 98vw;
+    .korobka_vnutri {
+        justify-content: space-around;
+        width: 76vw;
+        display: flex;
+        .kartochka_odin {
+            background-image: url(../assets/Fonn2.png);
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            display: flex;
+            height: 500px;
+            width: 710px;
+            h2 {
+                height: 6vh;
+                font-weight: 400;
+                color: $belaya_kraska;
+                font-size: 34px;
+            }
+            p {
+                @include tekst_vosemnadcat();
+                height: 4vh;
+            }
+            h3 {
+                @include tekst_vosemnadcat();
+                height: 3vh;
+            }
+            .knopki_vnizu {
+                align-items: center;
+                justify-content: space-around;
+                display: flex;
+                height: 8vh;
+                width: 20vw;
+            }
+        }
+        .kartochka_dva {
+            @extend .kartochka_odin;
+            background-image: url(../assets/Fonn3.png);
+        }
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+    .obolochka_dva {
+        .korobka_vnutri {
+            width: 96vw;
+            .kartochka_odin {
+                height: 465px;
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    .obolochka_dva {
+        .korobka_vnutri {
+            width: 96vw;
+            .kartochka_odin {
+                background-position: center;
+                height: 450px;
+                width: 380px;
+            }
+        }
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .obolochka_dva {
+        .korobka_vnutri {
+            width: 98vw;
+            .kartochka_odin {
+                background-position: center;
+                height: 430px;
+                width: 210px;
+            }
+        }
+    }
+}

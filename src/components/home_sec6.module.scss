@@ -1,0 +1,99 @@
+$chernyi_cvet: #1B1B1B;
+
+@mixin tekst_otzyva {
+    text-align: center;
+    font-weight: 400;
+    font-size: 23px;
+    color: $chernyi_cvet;
+}
+
+.shestoy_blok {
+    .polosa_otzyvov {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 40vh;
+        width: 98vw;
+        .karusel_korobka {
+            justify-content: space-around;
+            display: flex;
+            width: 90vw;
+            :global(.swiper) {
+                height: 100%;
+                width: 100%;
+            }
+            :global(.swiper-slide) {
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                background: #444;
+                font-size: 18px;
+                text-align: center;
+            }
+            :global(.swiper-slide img) {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
+            .otzyv_kartochka {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                height: 30vh;
+                p {
+                    @include tekst_otzyva();
+                    height: 12vh;
+                    color: $chernyi_cvet;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    .shestoy_blok {
+        .polosa_otzyvov {
+            .karusel_korobka {
+                .otzyv_kartochka {
+                    p {
+                        font-size: 20px;
+                    }
+                    img {
+                        height: 50px;
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .shestoy_blok {
+        .polosa_otzyvov {
+            height: 56vh;
+            .karusel_korobka {
+                .otzyv_kartochka {
+                    justify-content: space-evenly;
+                    align-items: center;
+                    display: flex;
+                    height: 50vh;
+                    p {
+                        width: 33vw;
+                        font-size: 18px;
+                    }
+                    img {
+                        height: 40px;
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
